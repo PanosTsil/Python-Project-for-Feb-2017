@@ -1,0 +1,26 @@
+#This program takes a list as an input and transfers the zeroes at the end of the list without altering the order of the other items.
+
+
+
+
+
+x= []
+print("Type \"666\" if you want to stop.")
+while True:
+	obj= int(raw_input("Please give a number: "))
+	if obj== 666:
+		break
+	x.append(obj)
+	
+print (x)
+n=int(len(x))- 1
+for i in range(n):
+	if x[i] == 0:
+		j=i
+		while j<n:
+			temp=x[j]
+			x[j]=x[j+1]
+			x[j+1]=temp
+			j=j + 1
+	
+print(x)
